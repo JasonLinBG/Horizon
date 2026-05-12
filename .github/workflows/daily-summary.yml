@@ -1,11 +1,11 @@
 name: Daily Horizon Summary
 
 on:
-  # schedule:
-  #   - cron: '0 0 */2 * *'  # Runs every 2 days at 00:00 UTC
+  schedule:
+    - cron: '0 0 * * *'  # Runs everyday at 00:00 UTC
   workflow_dispatch:      # Allow manual trigger
 
-jobs:
+jobs:    
   daily-summary:
     runs-on: ubuntu-latest
     permissions:
